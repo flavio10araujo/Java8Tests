@@ -33,6 +33,8 @@ public class BMain {
 	}
 
 	// O uso do streams é nesse método:
+	// Predicate é uma das interfaces funcionais prontas do java 8.
+	// Predicate tem o mesmo efeito que eu criar uma interface funcional com o método public boolean test(T  t);
 	private static void printNames(List<Person> persons, Predicate<Person> predicate) {
 		persons.stream()
 		.filter(predicate)

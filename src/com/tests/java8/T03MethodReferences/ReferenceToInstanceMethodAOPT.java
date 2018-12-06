@@ -3,6 +3,7 @@ package com.tests.java8.T03MethodReferences;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 /**
  * Reference To an Instance Method Of An Arbitrary Object Of A Particular Type.
@@ -23,11 +24,15 @@ public class ReferenceToInstanceMethodAOPT {
 		// So the containing type is persons and the method name is getAge();
 		
 		// Lambda Form:
-		// List allAges = ReferenceToInstanceMethodAOPT.listAllAges(persons, x -> x.getAge());
+		// List allAges = ReferenceToInstanceMethodAOPT.listAllAges(persons, x -> x.getAge()); // OPCAO 01
+		// persons.forEach(p -> System.out.println(p.getAge())); // OPCAO 02
 		// Method Reference:
-		// List allAges = ReferenceToInstanceMethodAOPT.listAllAges(persons, Person::getAge);
+		// List allAges = ReferenceToInstanceMethodAOPT.listAllAges(persons, Person::getAge); // OPCAO 01
+		// persons.forEach(System.out::println); // OPCAO 02
 		
-		List<Integer> allAges = ReferenceToInstanceMethodAOPT.listAllAges(persons, Person::getAge);
+		//List<Integer> allAges = ReferenceToInstanceMethodAOPT.listAllAges(persons, Person::getAge);
+		
+		List<Integer> allAges = persons.stream().map(Person::getAge).collect(Collectors.toList());
 		
 		System.out.println("Printing out all ages \n" + allAges);
 	}

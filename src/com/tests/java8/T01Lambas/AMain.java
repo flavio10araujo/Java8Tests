@@ -1,6 +1,7 @@
 package com.tests.java8.T01Lambas;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -11,7 +12,7 @@ public class AMain {
 		// Supondo que eu preciso iterar uma lista e mostrar o conteúdo com letras maiúsculas.
 		System.out.println("### EXEMPLO 01 ###");
 		
-		// Como era sem os lamdas:
+		// Como era sem os lambdas:
 		System.out.println("LIST SEM LAMBDAS");
 		
 		List<String> t1 = new ArrayList<String>();
@@ -25,16 +26,18 @@ public class AMain {
 		}
 		
 		// Para um array, sem lambdas:
-		System.out.println("ARRAY SEM LAMBDAS");
-		
 		String[] t2 = {"a", "b", "c"};
 		
+		System.out.println("ARRAY SEM LAMBDAS");
 		for (String s : t2) {
 			System.out.println(s.toUpperCase());
 		}
 		
-		// Como é com os lamdas:
-		System.out.println("COM LAMBDAS");
+		System.out.println("ARRAY COM LAMBDAS");
+		Arrays.asList(t2).forEach(item -> System.out.println(item.toUpperCase()));		
+		
+		// Como é com os lambdas:
+		System.out.println("LIST COM LAMBDAS");
 		
 		List<String> t3 = new ArrayList<String>();
 		

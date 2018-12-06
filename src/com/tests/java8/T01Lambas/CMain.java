@@ -18,15 +18,13 @@ public class CMain {
 		/* WITHOUT LAMBDAS - END */
 		
 		
-		
 		/* WITH LAMBDAS - BEGIN */
-		// lambda expression helps us write very simple code 
-		// and also helped removed all those anonymous inner classes you would have had to create.
+		// lambda expression helps us write very simple code and also helped removed all those anonymous inner classes you would have had to create.
 		myName(n -> System.out.println("My name is " + n), "John");
 		/* WITH LAMBDAS - END */
 		
 		
-		// A sintaxe do lambda é:  (argumento) -> { o que deve fazer }
+		// A sintaxe do lambda é: (argumento) -> { o que deve fazer }
 		// argumento pode ser vazio, 1 ou vários.
 		// o que deve fazer é o que será feito com os argumentos.
 		

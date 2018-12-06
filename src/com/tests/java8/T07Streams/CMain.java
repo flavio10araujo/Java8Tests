@@ -30,6 +30,8 @@ public class CMain {
 		// filtering 4
 		// mapping 4
 		
+		// The values of twoEvenSquares will be 4 and 16.
+		
 		// ###################################
 		
 		List<Integer> numbers2 = Arrays.asList(1, 1, 3, 2, 3, 1, 1, 4);

@@ -37,15 +37,16 @@ public class AMain {
 	}
 	
 	public static void main(String[] args) {
+		
 		final Collection<Task> tasks = Arrays.asList(
 				new Task(Status.OPEN, 5),
 				new Task(Status.CLOSED, 8),
 				new Task(Status.OPEN, 13)
 		);
 		
-		// Calculate total points of all active tasks using sum().
+		// Calculate total points of all open tasks using sum().
 		// Firstly, the tasks collection is converted to its stream representation.
-		// Then, the filter operation on stream filters out all CLOSED tasks.
+		// Then, the filter operation on stream filters out all OPEN tasks.
 		// On next step, the mapToInt operation converts the stream of Tasks to the stream of Integers using Task::getPoints method of the each task instance.
 		// And lastly, all points are summed up using sum method, producing the final result.
 		final long totalPointsOfOpenTasks = tasks

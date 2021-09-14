@@ -56,7 +56,6 @@ public class AMain {
 			}
 		});
 		
-		
 		System.out.println("### EXEMPLO 03 ###");
 		// Como era pra iterar um Map.
 		Map<String, Integer> items = new HashMap<>();

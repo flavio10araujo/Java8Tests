@@ -6,11 +6,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+// mudei aqui.
+
 public class AMain {
 
 	public static void main(String[] args) {
 		// Supondo que eu preciso iterar uma lista e mostrar o conteúdo com letras maiúsculas.
-		System.out.println("### EXEMPLO 01 ###");
+		System.out.println("### EXEMPLO 01 #####");
 		
 		// Como era sem os lambdas:
 		System.out.println("LIST SEM LAMBDAS");
